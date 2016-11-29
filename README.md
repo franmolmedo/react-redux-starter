@@ -1,37 +1,55 @@
-# You've added your first ReadMe file!
-A README.md file is intended to quickly orient readers to what your project can do.  New to Markdown? [Learn more](https://go.microsoft.com/fwlink/p/?LinkId=524306&clcid=0x409)
+# ReactReduxStarter
 
-## Edit this ReadMe and commit your change to a topic branch
-In Git, branches are cheap.  You should use them whenever you're making changes to your repository.  Edit this file by clicking on the edit icon.
+This starter creates a basic scaffolding of a FRONTEND app including
+  * Asp.net Core server.
+  * React as UI layer
+  * React-Router to allow navigation.
+  * Redux for managing application state.
+  * Sass styles
 
-Then make some changes to this ReadMe file.
+## Features
+  This starter includes the following top notch technologies:
+  * Immutable.js
+  * ES-Lint
+  * Babel plugin (ES2015)
+  * HMR
 
-> Make some **edits** to _this_ blockquote
+## Requirements
+### Windows
+  * Node.js installed globally (at least 4.5 version): https://nodejs.org or using chocolatey(https://chocolatey.org/): choco install nodejs
+  * Yarn: Needs to be installed globally: npm install -g yarn or using chocolatey:
+  choco install yarn
+  * .NET Core SDK for Windows: https://go.microsoft.com/fwlink/?LinkID=809122
 
-When you are done, click the dropdown arrow next to the save button - that will allow you to commit your changes to a new branch.
+### Prefered IDEs
+  * Visual Studio Code
+  * Atom
+  * WebStorm
+  * Brackets
 
-## Create a pull request to contribute your changes back into master
-Pull requests are the way to move changes from a topic branch back into the master branch.
+## How to use
+  * Clone/Fork the project to a desired folder.
+  * In CMD go to the previous folder and type npm install. It will download all project dependencies (it will take some time).
+      - [Yarn]: yarn install
 
-Click on the **Pull Requests** page in the **CODE** hub, then click "New Pull Request" to create a new pull request from your topic branch to the master branch.
+### DEBUG
+  * Once again in your command prompt type npm run start. The application will be launched using the webpack dev server allowing to make changes in real time without reloading the page.
+      - [Yarn]: yarn start
 
-When you are done adding details, click "Create Pull request". Once a pull request is sent, reviewers can see your changes, recommend modifications, or even push follow-up commits.
+  * There is a separate configuration for bundling vendor files and application file in development.
+      - Generating vendor bundle: npm run dll or yarn dll
+      - Launch the dev-server without bundling vendors: npm run start:nodep or yarn start:nodep
 
-First time creating a pull request?  [Learn more](https://go.microsoft.com/fwlink/?LinkId=533211&clcid=0x409)
+### PUBLISH
+  * In your command prompt execute npm run build and it will pass all tests, generate the bundles and create the production ready app. The result would be published in the build folder.
+      - [Yarn]: yarn build
 
-### Congratulations! You've completed the grand tour of the CODE hub!
+### TEST
+  * Type npm run test: It will launch the test ready environment.
+      - [Yarn]: yarn test
+  * Test with coverage: type npm run test:cover or yarn test:cover
+  * Test with watcher: type npm run test:watch or yarn test:watch
 
-# Next steps
-
-If you haven't already done so, [install Git](https://git-scm.com/downloads) (as well as [Git Credential Manager](https://java.visualstudio.com/Downloads/gitcredentialmanager/Index) for Linux or Mac OS)
-
-Choose and install one of these supported IDEs:
-* [Visual Studio](https://go.microsoft.com/fwlink/?LinkId=309297&clcid=0x409&slcid=0x409)
-* [Android Studio](https://developer.android.com/studio) (with [Team Services Plugin](https://java.visualstudio.com/Downloads/intellijplugin/Index))
-* [Eclipse](https://www.eclipse.org/downloads) (with [Team Explorer Everywhere](https://java.visualstudio.com/Downloads/eclipseplugin/Index))
-* [IntelliJ IDEA](https://www.jetbrains.com/idea/download) (with [Team Services Plugin](https://java.visualstudio.com/Downloads/intellijplugin/Index))
-* [Visual Studio Code](https://code.visualstudio.com/Download) (with [Team Services Extension](https://java.visualstudio.com/Downloads/visualstudiocode/Index))
-
-Then clone this repo to your local machine to get started with your own project.
-
-Happy coding!
+### LINT
+  * Type npm run lint and all your lint rules will be checked.
+      - [Yarn]: yarn lint
